@@ -1,5 +1,8 @@
 package com.failall.cultivation_miracle;
 
+import com.failall.cultivation_miracle.cultivation.CultivationRealm;
+import com.failall.cultivation_miracle.registry.CultivationRealmRegistry;
+import com.failall.cultivation_miracle.registry.CultivationStageRegistry;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
@@ -67,6 +70,9 @@ public class CultivationMiracle
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+
+        CultivationRealmRegistry.register(modEventBus);
+        CultivationStageRegistry.register(modEventBus);
 
         // Register the Deferred Register to the mod event bus so blocks get registered
         BLOCKS.register(modEventBus);

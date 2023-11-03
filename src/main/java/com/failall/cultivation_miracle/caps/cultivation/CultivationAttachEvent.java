@@ -1,8 +1,6 @@
-package com.failall.cultivation_miracle.events;
+package com.failall.cultivation_miracle.caps.cultivation;
 
 import com.failall.cultivation_miracle.CultivationMiracle;
-import com.failall.cultivation_miracle.caps.cultivation.CultivationCapability;
-import com.failall.cultivation_miracle.caps.cultivation.CultivationProvider;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
@@ -12,7 +10,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = CultivationMiracle.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
-public class CapabilityEvent {
+public class CultivationAttachEvent {
 
     // Whenever a new object of some type is created the AttachCapabilitiesEvent will fire. In our case we want to know
     // when a new player arrives so that we can attach our capability here
